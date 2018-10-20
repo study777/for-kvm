@@ -19,6 +19,7 @@ root
 初始化系统
 ```systemctl stop NetworkManager
 systemctl disable NetworkManager
+systemctl  stop  
 systemctl  disable  firewalld
 systemctl   stop   firewalld.service
 sed -i 's/enforcing/disabled/g'  /etc/selinux/config
