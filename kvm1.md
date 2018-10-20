@@ -78,10 +78,8 @@ yum   -y   install   libvirt*
 virsh net-define    /etc/libvirt/qemu/networks/br0.xml
 virsh net-start   br0
 virsh  net-autostart  br0
-virsh pool-destroy default
-virsh pool-undefine default
-mkdir /kvm/image
-mkdir /kvm/iso
+mkdir -p /kvm/image
+mkdir  -p /kvm/iso
 virsh pool-define-as  kvmimage  dir --target  "/kvm/image"
 virsh pool-define-as  ISO  dir --target  "/kvm/iso"
 virsh pool-start  kvmimage
