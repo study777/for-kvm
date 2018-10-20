@@ -17,12 +17,19 @@ root
 
 
 初始化系统
-```systemctl stop NetworkManager
+```
+systemctl stop NetworkManager
+
 systemctl disable NetworkManager
+
 systemctl  stop   firewalld
+
 systemctl  disable  firewalld
+
 systemctl   stop   firewalld.service
+
 sed -i 's/enforcing/disabled/g'  /etc/selinux/config
+
 yum -y install bridge-utils-1.5-9.el7.x86_64
 
 
