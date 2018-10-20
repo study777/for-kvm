@@ -61,35 +61,25 @@ yum   -y   install   libvirt*
 
 
 virsh net-define    /etc/libvirt/qemu/networks/br0.xml
-
 virsh net-start   br0
-
 virsh  net-autostart  br0
-
-
-
 virsh pool-destroy default
-
 virsh pool-undefine default
-
-
 mkdir /kvm/image
 mkdir /kvm/iso
-
-
 virsh pool-define-as  kvmimage  dir --target  "/kvm/image"
 virsh pool-define-as  ISO  dir --target  "/kvm/iso"
-
 virsh pool-start  kvmimage
 virsh pool-start  ISO
-
 virsh  pool-autostart   kvmimage
 virsh  pool-autostart   ISO
 ```
 
 按装virt-manager  图形工具
 
-```yum   -y   install    virt-manager xorg*```
+```
+yum   -y   install    virt-manager xorg*
+```
 
 
 在xshell 中再次连接宿主机  可以多尝试几次 只到 没有再出现 之类的提示 
