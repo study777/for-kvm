@@ -88,31 +88,10 @@ virsh  pool-autostart   ISO
 ```
 
 按装virt-manager  图形工具
-```
-yum   -y   install    virt-manager
 
-yum -y install xorg*
-```
+```yum   -y   install    virt-manager xorg*```
+
+
 在xshell 中再次连接宿主机  可以多尝试几次 只到 没有再出现 之类的提示 
 
-
-
-
 输入 virt-manager 命令  即可打开图形工具
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
