@@ -45,6 +45,15 @@ USERCTL=no
 TYPE=Bridge
 ```
 
+检查宿主机是否支持  kvm
+
+egrep '(vmx|svm)' /proc/cpuinfo
+
+
+安装kvm 
+
+yum   -y   install   libvirt*  
+
 创建 kvm 使用的网络  名字是  br0   类型为桥接    桥接到宿主机的br0 网桥上
 
 
