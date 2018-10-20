@@ -53,6 +53,13 @@ USERCTL=no
 TYPE=Bridge
 ```
 
+
+重启网络 使之生效
+
+```
+systemctl  restart network
+```
+
 检查宿主机是否支持  kvm
 
 egrep '(vmx|svm)' /proc/cpuinfo
