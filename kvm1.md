@@ -1,4 +1,4 @@
-##  系统安装
+系统安装
 
 
 设置网卡名字为 eth 样式
@@ -47,9 +47,10 @@ TYPE=Bridge
 
 创建 kvm 使用的网络  名字是  br0   类型为桥接    桥接到宿主机的br0 网桥上
 
+
 ```echo "<network><name>br0</name><uuid>`uuidgen`</uuid><forward mode='bridge'/><bridge name='br0' /></network>" >  /etc/libvirt/qemu/networks/br0.xml```
 
-```
+
 virsh net-define    /etc/libvirt/qemu/networks/br0.xml
 
 virsh net-start   br0
