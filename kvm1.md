@@ -59,7 +59,7 @@ yum   -y   install   libvirt*
 
 ```echo "<network><name>br0</name><uuid>`uuidgen`</uuid><forward mode='bridge'/><bridge name='br0' /></network>" >  /etc/libvirt/qemu/networks/br0.xml```
 
-
+```
 virsh net-define    /etc/libvirt/qemu/networks/br0.xml
 virsh net-start   br0
 virsh  net-autostart  br0
